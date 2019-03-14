@@ -28,11 +28,6 @@ body{
 .App-link {
   color: #61dafb;
 }
-/* .Rectangle-out{
-  background-image: linear-gradient(152deg, #3023ae, #c86dd7);
-  width: 100%;
-  height: 100%;
-} */
 .navbar{
   margin-top: -2.3vw;
 }
@@ -47,15 +42,10 @@ body{
   -webkit-justify-content: center;
   justify-content: center;
   max-width: 100%;
-  /* position: relative; */
   margin: 0 auto;
   width: 800px;
-  /* padding: auto 0; */
-
 }
 .Rectangle{
-  /* width: 335px; */
-  /* height: auto; */
   max-width: 100%;
   max-height: 100%;
   border-radius: 2px;
@@ -64,10 +54,7 @@ body{
   margin-top: 2%;
   display: flex;
   flex-direction: column;
-  /* position: relative; */
   margin: 0 auto;
-  /* padding: auto 0; */
-
 }
 @media screen and (min-width:768px){
   .Rectangle{
@@ -75,11 +62,7 @@ body{
   }
 }
 .Create-A-New-Account{
-  /* width: 202px; */
-  /* height: 24px; */
   font-family: Roboto;
-  /* font-size: auto; */
-  /* font-weight: auto; */
   font-size: calc(10px + 2vmin);
   font-style: normal;
   font-stretch: normal;
@@ -89,12 +72,8 @@ body{
   color: #ffffff;  
 }
 .label-style{
-  /* text-align: left;
-  margin-left: auto; */
-  /* align-content: flex-end; */
   text-align: left;
   max-width: 90%;
-  /* font-size: 1vw; */
 }
 @media screen and (max-width:300px){
   .label-style{
@@ -104,11 +83,6 @@ body{
 .label-text{
   align-content: flex-start;
 }
-/* @media screen and (max-width: 200px){
-  .label-style{
-    margin-left: 25%;
-  }
-} */
 .trial{
   max-width: 90%;
 }
@@ -135,16 +109,6 @@ body{
     transform: rotate(360deg);
   }
 }
-
-/*Chat UI CSS*/
-/* .outer-rectangle{
-  border: #3023ae;
-  border-bottom-width: 2px;
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-left-width: 2px;
-  background-color: #ffffff;
-} */
 .chatbar{
   background-color: white;
   margin-top: 0.7%;
@@ -164,37 +128,6 @@ body{
 .visibility{
   z-index: 1000 !important;
 }
-/* ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-} */
-/* .glyph-size{
-  width: 4%;
-  height: 5%;
-} */
 .mr-sm-2{
   margin-bottom: -1vw;
 }
@@ -217,7 +150,6 @@ li a:hover:not(.active) {
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
-  /* padding-top: 60px; */
 }
 .sidebar a{
   color: #6f42c1;
@@ -254,11 +186,6 @@ li a:hover:not(.active) {
   padding: 10px 15px;
   border: none;
 }
-
-/* .openbtn:hover {
-  background-color: #444;
-} */
-
 #main {
   transition: margin-left .5s;
   padding: 16px;
