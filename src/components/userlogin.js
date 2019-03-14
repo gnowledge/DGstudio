@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Gun from "gun"
+require('gun/sea');
 
 export default class UserLogin extends Component {
   
@@ -33,6 +35,13 @@ export default class UserLogin extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+    var gun = Gun();
+    var user = gun.user();
+    user.auth(this.state.username, this.state.password, function(ack){ if(ack.err){ alert("wrong"); }
+    else {
+      alert("sucsess");
+    } })
+
     console.log(`The values are ${this.state.email}, ${this.state.username}, and ${this.state.password}`)
     this.setState({
       email: '',
