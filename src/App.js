@@ -11,6 +11,9 @@ import Gun from 'gun/gun';
 require('gun/sea');
 
 class App extends Component {
+  // clear(event){
+  //   document.getElementById("demo_para").innerHTML="";
+  // }
   render() {
     return (
     	<Router>
@@ -47,15 +50,6 @@ class App extends Component {
         </div>
       </Router>
 
-// import './App.css';
-// import Registration from './components/userregistration';
-// import Chat from './components/userchat'
-// class App extends Component {
-//   render() {
-//     return (
-//          <Chat/>
-//         //  <Registration/>
-// >>>>>>> Stashed changes
     );
   }
 }

@@ -26,14 +26,19 @@ export default class Chat extends React.Component {
     openNav(event) {
         document.getElementById("mySidebar").style.cssText = "width:250px";
         document.getElementById("main").style.cssText = "margin-left:250px";
-        document.getElementById("paragraph").style.cssText = "margin-left:265px";
+        var class_value = document.getElementsByClassName("my_para");
+        for(var i=0; i<class_value.length; ++i){
+            class_value[i].style.cssText = "margin-left:265px";
+        }
     }
       
     closeNav(event) {
         document.getElementById("mySidebar").style.cssText = "width:0px";
         document.getElementById("main").style.cssText= "margin-left:0px";
-        document.getElementById("paragraph").style.cssText = "margin-left:15px";
-
+        var class_value = document.getElementsByClassName("my_para");
+        for(var i=0; i<class_value.length; ++i){
+            class_value[i].style.cssText = "margin-left:15px;"
+        }
       }
       
     enterValue = (event) => {
@@ -45,6 +50,7 @@ export default class Chat extends React.Component {
                 newdiv = document.createElement("DIV");
                 para = document.createElement("P");
                 para.id = "paragraph";
+                para.classList.add('my_para');
                 t = document.createTextNode(new_value+': '+send_val);
                 para.appendChild(t);
                 newdiv.appendChild(para);
