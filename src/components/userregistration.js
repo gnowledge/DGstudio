@@ -36,7 +36,7 @@ export default class UserRegistration extends Component {
   emailvalidation(event){
     var success=0;
     var email_input=this.state.email;
-    var format=/^.*@.*/; //regex for ten digits
+    var format=/^.*@.*/; //regex for @somewhere
     if(format.test(email_input)){
       success=1;
     }
@@ -67,6 +67,7 @@ export default class UserRegistration extends Component {
   }
 
     render(){
+
       return (
                 <div>
                 <form onSubmit={this.onSubmit}>
@@ -74,7 +75,7 @@ export default class UserRegistration extends Component {
                       <center>Create A New Account</center> <br></br><br></br>
                     </div>
                     <center>
-                    <div className="Rectangle">
+                    <div className="Rectangle col">
                       <div className="form-group">
                         <div className="label-style"><label><br></br><br></br><b>Email</b></label></div>
                           <input 
@@ -120,7 +121,7 @@ export default class UserRegistration extends Component {
 
                       <div className="form-group">
 
-                      <input type="submit" value="Sign Up" className="Rectangle-Copy-3"></input>
+                      <input type="submit" value="Sign Up" className="Rectangle-Copy-3 trial"></input>
                       </div>
                     </div>
                     </center>
