@@ -26,11 +26,14 @@ export default class Chat extends React.Component {
     openNav(event) {
         document.getElementById("mySidebar").style.cssText = "width:250px";
         document.getElementById("main").style.cssText = "margin-left:250px";
+        document.getElementById("paragraph").style.cssText = "margin-left:265px";
     }
       
     closeNav(event) {
         document.getElementById("mySidebar").style.cssText = "width:0px";
         document.getElementById("main").style.cssText= "margin-left:0px";
+        document.getElementById("paragraph").style.cssText = "margin-left:15px";
+
       }
       
     enterValue = (event) => {
@@ -38,11 +41,13 @@ export default class Chat extends React.Component {
             var send_val = this.state.chat_value;
             var new_value= this.state.username;
             if(this.state.username=='Shwetha'){
+                var newdiv = document.createElement("DIV");
                 var para = document.createElement("P");
+                para.id = "paragraph";
                 var t = document.createTextNode(new_value+': '+send_val);
-                para.style.cssText = 'text-align:left;color:white;font-size:calc(10px + 2vmin);margin-left:15px;font-family:Roboto;font-weight:bold;';
                 para.appendChild(t);
-                document.body.appendChild(para);      
+                newdiv.appendChild(para);
+                document.getElementById("trial-div").appendChild(newdiv);      
                 this.setState({chat_value:''});
             }
             else if(this.state.username==''){
@@ -50,20 +55,20 @@ export default class Chat extends React.Component {
             }
             else{
                 var newdiv = document.createElement("DIV");
+                newdiv.id = "blah";
                 var para = document.createElement("P");
+                para.id = "paragraph_new";
                 var t = document.createTextNode(new_value+': '+send_val);
-                newdiv.style.cssText = 'display:block;overflow:auto';
-                para.style.cssText = 'text-align:right;color:white;font-size:calc(10px + 2vmin);margin-right:15px;font-family:Arial;font-weight:bold;';
                 para.appendChild(t);
                 newdiv.appendChild(para);
-                document.body.appendChild(newdiv);      
+                document.getElementById("trial-div").appendChild(newdiv);      
                 this.setState({chat_value:''});
             }
         }
     }      
     render(){
         return (
-            <div>
+            <div id="trial-div">
                <div id="mySidebar" className="sidebar">
                     <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav.bind(this)}>×</a>
                     <br></br><br></br><br></br>
@@ -83,8 +88,8 @@ export default class Chat extends React.Component {
                 <div className="Rectangle col">
                     <div className="form-group fixed-bottom visibility">
                         <input id="chattext" type="text" placeholder="Enter text here" className="form-control mr-sm-2" onChange={this.message.bind(this)} onKeyPress={this.enterValue} value={this.state.chat_value}></input>
-                    </div>
                 </div>
+            </div>
             </div>
         );
 

@@ -190,3 +190,24 @@ body{
   transition: margin-left .5s;
   padding: 16px;
 }
+#trial-div{
+  position: fixed;
+}
+#paragraph{
+  text-align:left;
+  color:white;
+  font-size:calc(10px + 2vmin);
+  margin-left:15px;
+  font-family:Roboto;
+  font-weight:bold;
+  transition: margin-left .5s;
+}
+#paragraph_new{
+  text-align:right;
+  color:white;
+  font-size:calc(10px + 2vmin);
+  margin-right:2vw;
+  font-family:Arial;
+  font-weight:bold;
+  margin-left:85vw !important;
+}
