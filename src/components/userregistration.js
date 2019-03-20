@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import Gun from "gun"
+require('gun/sea');
 
 export default class UserRegistration extends Component {
   constructor(props){
@@ -45,6 +47,9 @@ export default class UserRegistration extends Component {
   }
 
   onSubmit(e) {
+  	var gun = Gun()
+  	var user = gun.user()
+  	user.create(this.state.email,this.state.password)
     e.preventDefault();
     console.log(`The values are ${this.state.email}, ${this.state.username}, and ${this.state.password}`)
     this.setState({

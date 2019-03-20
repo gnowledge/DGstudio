@@ -5,6 +5,10 @@ import './App.css';
 import UserLogin from './components/userlogin';
 import Home from './components/home';
 import UserRegistration from './components/userregistration';
+import UserLogout from './components/userlogout';
+
+import Gun from "gun";
+require('gun/sea');
 
 class App extends Component {
   render() {
@@ -24,6 +28,9 @@ class App extends Component {
                 <li className="nav-item">
                   <Link to={'/'} className="nav-link">Home</Link>
                 </li>
+                <li className="nav-item">
+                  <Link to={'/logout'} className="nav-link">Log out</Link>
+                </li>
               </ul>
             </div>
           </nav> <br/>
@@ -31,6 +38,7 @@ class App extends Component {
           <Switch>
               <Route exact path='/newUser' component={ UserRegistration } />
               <Route path='/login' component={ UserLogin } />
+              <Route path='/logout' component={ UserLogout }/>
               <Route path='/' component={ Home } />
           </Switch>
         </div>
